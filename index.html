@@ -5,7 +5,7 @@
   <title>Happy Rose Day 🌹</title>
   <style>
     body {
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      background: linear-gradient(135deg, #ff6a88, #ff99ac);
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
@@ -15,32 +15,85 @@
       color: white;
       text-align: center;
     }
+
     .card {
       background: rgba(255, 255, 255, 0.15);
       padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      max-width: 350px;
+      max-width: 360px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
+
     h1 {
-      font-size: 2.2em;
+      font-size: 1.6em;
+      margin-bottom: 15px;
     }
-    p {
-      font-size: 1.2em;
-    }
+
     .rose {
       font-size: 4em;
-      margin: 15px 0;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no {
+      background: #555;
+      color: white;
+    }
+
+    #response {
+      margin-top: 20px;
+      font-size: 1.3em;
     }
   </style>
 </head>
 <body>
+
   <div class="card">
-    <h1>Happy Rose Day 🌹</h1>
+    <h1>Hey, too soon I know!<br>But handle it pls 😉</h1>
+
+    <p>Happy Rose Day</p>
     <div class="rose">🌹</div>
-    <p>This rose is for you,</p>
-    <p>to remind you how special you are to me ❤️</p>
-    <p>— From someone who cares 💌</p>
+
+    <p>Should I expect a rose from you today?</p>
+
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">YES</button>
+      <button class="no" onclick="sayNo()">NO</button>
+    </div>
+
+    <div id="response"></div>
   </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("response").innerHTML = "Waiting ;) ";
+    }
+
+    function sayNo() {
+      document.getElementById("response").innerHTML = " :( :( HUH!";
+    }
+  </script>
+
 </body>
 </html>
